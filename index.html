@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Więcej klientów dla Twojej firmy</title>
+  <style>
+    body { font-family: sans-serif; margin: 0; padding: 0; background: #f9f9f9; color: #333; }
+    header { background: #003366; color: white; padding: 2rem; text-align: center; }
+    h1 { font-size: 2rem; margin-bottom: 0.5rem; }
+    h2 { font-size: 1.25rem; font-weight: 400; margin-top: 0; }
+    section { padding: 2rem; max-width: 800px; margin: auto; }
+    .features { background: #fff; border-radius: 8px; padding: 1.5rem; box-shadow: 0 2px 5px rgba(0,0,0,0.1); margin-bottom: 2rem; }
+    ul { list-style: none; padding-left: 1rem; }
+    li::before { content: "✔️"; margin-right: 0.5rem; color: green; }
+    .price { font-size: 1.5rem; color: #003366; font-weight: bold; }
+    .cta { text-align: center; margin-top: 2rem; }
+    .cta a { background: #003366; color: white; padding: 1rem 2rem; text-decoration: none; font-size: 1.25rem; border-radius: 8px; display: inline-block; }
+    .form { background: #fff; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    input, textarea { width: 100%; padding: 0.75rem; margin: 0.5rem 0; border-radius: 6px; border: 1px solid #ccc; }
+    button { background: #003366; color: white; padding: 1rem; border: none; border-radius: 6px; font-size: 1rem; cursor: pointer; width: 100%; }
+    footer { text-align: center; padding: 1rem; font-size: 0.875rem; color: #888; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Więcej klientów z Google dla Twojej firmy</h1>
+    <h2>Strona + Wizytówka Google + SEO lokalne dla hydraulików</h2>
+  </header>
+
+  <section>
+    <div class="features">
+      <h3>Co dostajesz?</h3>
+      <ul>
+        <li>Nowoczesna, responsywna strona internetowa</li>
+        <li>Optymalizacja wizytówki Google Moja Firma</li>
+        <li>Widoczność w Google na hasła “hydraulik + miasto”</li>
+        <li>Pomoc w zdobyciu pierwszych opinii</li>
+        <li>Strona gotowa w 7 dni</li>
+      </ul>
+    </div>
+
+    <div class="features">
+      <p class="price">Cena: 1490 PLN netto</p>
+      <p>Opcjonalna opieka techniczna: 99 PLN / mies.</p>
+    </div>
+
+    <div class="features">
+      <h3>Darmowy audyt widoczności</h3>
+      <p>Sprawdzę Twoją wizytówkę i stronę – dostaniesz PDF z uwagami i propozycją zmian. Bez zobowiązań.</p>
+    </div>
+
+    <div class="cta">
+      <a href="#formularz">Zamów darmowy audyt</a>
+    </div>
+  </section>
+
+  <section id="formularz">
+    <div class="form">
+      <h3>Formularz kontaktowy</h3>
+      <form name="kontakt" method="POST" data-netlify="true">
+        <input type="text" name="Imię" placeholder="Imię i nazwisko" required />
+        <input type="text" name="Firma" placeholder="Nazwa firmy" />
+        <input type="text" name="Miasto" placeholder="Miasto" required />
+        <input type="tel" name="Telefon" placeholder="Numer telefonu" required />
+        <textarea name="Wiadomość" placeholder="Wiadomość / pytanie" rows="4"></textarea>
+        <button type="submit">Wyślij i umów rozmowę</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 HydraulikBoost – więcej klientów, mniej czekania.
+  </footer>
+
+</body>
+</html>
