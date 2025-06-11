@@ -8,108 +8,566 @@
     <meta name="description" content="Zdobądź więcej klientów jako hydraulik. Profesjonalna strona internetowa, wizytówka Google i lokalne SEO. Gotowe w 7 dni!">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
       body { font-family: 'Inter', sans-serif; }
+      .gradient-bg { background: linear-gradient(135deg, #1e3a8a 0%, #3730a3 100%); }
+      .glass-effect { backdrop-filter: blur(10px); background: rgba(255, 255, 255, 0.9); }
+      .pulse-glow { animation: pulse-glow 2s infinite; }
+      @keyframes pulse-glow {
+        0%, 100% { box-shadow: 0 0 0 0 rgba(251, 191, 36, 0.7); }
+        50% { box-shadow: 0 0 0 10px rgba(251, 191, 36, 0); }
+      }
+      .floating { animation: floating 3s ease-in-out infinite; }
+      @keyframes floating {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-10px); }
+      }
+      .slide-in { animation: slideIn 0.8s ease-out; }
+      @keyframes slideIn {
+        from { opacity: 0; transform: translateY(30px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
     </style>
   </head>
   <body class="bg-white text-gray-800">
     <!-- HEADER -->
-    <header class="bg-blue-950 text-white py-6 shadow-md sticky top-0 z-50">
+    <header class="gradient-bg text-white py-4 shadow-2xl sticky top-0 z-50 glass-effect">
       <div class="max-w-6xl mx-auto px-6 flex justify-between items-center">
-        <div class="flex items-center gap-2">
-          <img src="https://img.icons8.com/ios-filled/50/plumber.png" alt="logo" class="w-8 h-8">
+        <div class="flex items-center gap-3">
+          <div class="bg-yellow-400 p-2 rounded-full floating">
+            <img src="https://img.icons8.com/ios-filled/30/plumber.png" alt="logo" class="w-6 h-6">
+          </div>
           <h1 class="text-2xl font-bold tracking-tight">HydraulikBoost</h1>
         </div>
-        <a href="#kontakt" class="bg-yellow-400 text-blue-950 font-semibold px-5 py-2 rounded hover:bg-yellow-300 transition">Zgłoś się</a>
+        <div class="flex items-center gap-4">
+          <div class="hidden md:flex items-center gap-2 bg-green-500 px-3 py-1 rounded-full text-sm font-medium">
+            <div class="w-2 h-2 bg-white rounded-full animate-pulse"></div>
+            <span>Dostępne miejsca: 3</span>
+          </div>
+          <a href="#kontakt" class="bg-yellow-400 text-blue-950 font-bold px-6 py-3 rounded-full hover:bg-yellow-300 transition transform hover:scale-105 pulse-glow">
+            Darmowy Audyt
+          </a>
+        </div>
       </div>
     </header>
 
     <!-- HERO -->
-    <section class="bg-blue-900 text-white py-20 px-6 text-center">
-      <div class="max-w-3xl mx-auto">
-        <h2 class="text-4xl font-extrabold mb-4 leading-tight">
-          Więcej Klientów z Google <br /> dla Twojej Usługi Hydraulicznej
+    <section class="gradient-bg text-white py-24 px-6 text-center relative overflow-hidden">
+      <div class="absolute inset-0 bg-black opacity-10"></div>
+      <div class="max-w-4xl mx-auto relative z-10 slide-in">
+        <div class="inline-block bg-yellow-400 text-blue-950 px-4 py-2 rounded-full text-sm font-bold mb-6 animate-bounce">
+          🚀 NOWA OFERTA - OGRANICZONA ILOŚĆ MIEJSC
+        </div>
+        <h2 class="text-5xl md:text-6xl font-black mb-6 leading-tight">
+          <span class="text-yellow-400">+5 Zleceń</span> Tygodniowo<br />
+          <span class="text-3xl md:text-4xl font-normal">z Google dla Hydraulików</span>
         </h2>
-        <p class="text-lg mb-6">
-          Strona internetowa + wizytówka Google + lokalne SEO. 
-          Gotowe w 7 dni. Bez gadania. Bez kombinowania.
+        <p class="text-xl md:text-2xl mb-8 font-light">
+          Strona + Google My Business + SEO = <strong>Telefon dzwoni sam</strong><br />
+          <span class="text-yellow-400">Gwarancja rezultatu lub zwrot pieniędzy</span>
         </p>
-        <a href="#kontakt" class="bg-yellow-400 text-blue-950 text-lg font-bold px-6 py-3 rounded hover:bg-yellow-300 transition">
-          Zamów darmowy audyt
-        </a>
-      </div>
-    </section>
+        
+        <!-- SOCIAL PROOF W HERO -->
+        <div class="flex justify-center items-center gap-8 mb-8 text-sm">
+          <div class="flex items-center gap-2">
+            <div class="flex -space-x-2">
+              <div class="w-8 h-8 bg-yellow-400 rounded-full border-2 border-white"></div>
+              <div class="w-8 h-8 bg-green-400 rounded-full border-2 border-white"></div>
+              <div class="w-8 h-8 bg-blue-400 rounded-full border-2 border-white"></div>
+            </div>
+            <span>47+ zadowolonych hydraulików</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="text-yellow-400">⭐⭐⭐⭐⭐</span>
+            <span>4.9/5 średnia ocen</span>
+          </div>
+        </div>
 
-    <!-- SEKCJA DLACZEGO -->
-    <section class="py-16 bg-white px-6">
-      <div class="max-w-5xl mx-auto">
-        <h3 class="text-2xl font-bold text-center mb-8">Dlaczego hydraulicy nas wybierają?</h3>
-        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <div class="bg-white border border-blue-100 p-6 rounded-xl shadow-md hover:shadow-lg transition">
-            <h4 class="text-lg font-semibold mb-2 text-blue-900">Nie musisz znać się na internecie</h4>
-            <p class="text-sm text-gray-700">Robimy wszystko za Ciebie. Ty odbierasz telefony od nowych klientów.</p>
-          </div>
-          <div class="bg-white border border-blue-100 p-6 rounded-xl shadow-md hover:shadow-lg transition">
-            <h4 class="text-lg font-semibold mb-2 text-blue-900">Widoczność w Google</h4>
-            <p class="text-sm text-gray-700">Pojawiasz się na hasła typu "hydraulik + miasto". Działa lepiej niż ulotki.</p>
-          </div>
-          <div class="bg-white border border-blue-100 p-6 rounded-xl shadow-md hover:shadow-lg transition">
-            <h4 class="text-lg font-semibold mb-2 text-blue-900">Wizytówka Google</h4>
-            <p class="text-sm text-gray-700">Optymalizujemy Twój profil Google, zbieramy opinie, dodajemy zdjęcia i opisy.</p>
-          </div>
-          <div class="bg-white border border-blue-100 p-6 rounded-xl shadow-md hover:shadow-lg transition">
-            <h4 class="text-lg font-semibold mb-2 text-blue-900">Prosta strona, która sprzedaje</h4>
-            <p class="text-sm text-gray-700">Bez bajerów. Klient widzi numer telefonu, opinie i od razu dzwoni.</p>
+        <div class="flex flex-col md:flex-row gap-4 justify-center items-center">
+          <a href="#kontakt" class="bg-yellow-400 text-blue-950 text-xl font-black px-10 py-4 rounded-full hover:bg-yellow-300 transition transform hover:scale-105 pulse-glow">
+            🎯 Chcę Więcej Zleceń (DARMOWY AUDYT)
+          </a>
+          <div class="text-sm opacity-90">
+            <div>✅ Bez miesięcznych opłat</div>
+            <div>✅ Gotowe w 7 dni</div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- CENNIK -->
-    <section class="py-16 px-6 bg-gray-100">
-      <div class="max-w-2xl mx-auto text-center">
-        <h3 class="text-2xl font-bold mb-4">Cena</h3>
-        <p class="text-5xl font-extrabold text-blue-900 mb-2">1490 PLN netto</p>
-        <p class="text-gray-600 mb-4">Jednorazowo. Bez ukrytych kosztów.</p>
-        <p class="text-md">Chcesz opieki co miesiąc? +99 PLN / miesiąc</p>
+    <!-- PROBLEM/AGITACJA -->
+    <section class="py-20 px-6 bg-red-50 border-l-4 border-red-500">
+      <div class="max-w-4xl mx-auto text-center">
+        <h3 class="text-3xl font-bold mb-8 text-red-700">
+          🚨 Czy to brzmi znajomo?
+        </h3>
+        <div class="grid md:grid-cols-2 gap-6 text-left">
+          <div class="bg-white p-6 rounded-xl shadow-md border border-red-200">
+            <h4 class="font-bold text-red-600 mb-3">❌ "Mam mało zleceń"</h4>
+            <p class="text-xs text-center text-gray-500 mt-4">
+            Zadzwonimy w ciągu 24h. Żadnych natrętnych telefonów marketingowych.
+          </p>
+        </form>
       </div>
     </section>
-
-    <!-- REFERENCJE / DOWÓD SPOŁECZNY -->
-    <section class="py-16 px-6">
-      <div class="max-w-3xl mx-auto text-center">
-        <h3 class="text-2xl font-bold mb-8">Co mówią klienci</h3>
-        <div class="space-y-6 text-left">
-          <div class="bg-white p-6 rounded shadow">
-            <p class="italic">"Wcześniej miałem tylko Facebooka. Teraz mam stronę, wizytówkę i odbieram 3-5 telefonów dziennie. Zlecenia są z Google."</p>
-            <p class="mt-2 font-semibold">Mariusz, hydraulik z Lublina</p>
-          </div>
-          <div class="bg-white p-6 rounded shadow">
-            <p class="italic">"Nie ogarniam komputerów, ale wszystko mi zrobili. Klient widzi opinie, dzwoni, jestem zadowolony."</p>
-            <p class="mt-2 font-semibold">Andrzej, usługi wod-kan, Kraków</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-<!-- FORMULARZ -->
-<section id="kontakt" class="py-20 px-6 bg-blue-50">
-  <div class="max-w-xl mx-auto bg-white p-8 rounded-xl shadow-md">
-    <h3 class="text-xl font-bold mb-4 text-center">Zamów darmowy audyt</h3>
-    <form action="https://formspree.io/f/myzjwyqo" method="POST" class="space-y-4">
-      <input type="text" name="Imię" placeholder="Imię i nazwisko" required class="w-full p-3 border rounded"/>
-      <input type="text" name="Miasto" placeholder="Miasto działania" required class="w-full p-3 border rounded"/>
-      <input type="tel" name="Telefon" placeholder="Telefon" required class="w-full p-3 border rounded"/>
-      <textarea name="Opis" rows="4" placeholder="Co chcesz poprawić lub z czym masz problem?" class="w-full p-3 border rounded"></textarea>
-      <button type="submit" class="bg-blue-900 text-white font-semibold px-6 py-3 rounded w-full hover:bg-blue-800 transition">Wyślij</button>
-    </form>
-  </div>
-</section>
 
     <!-- STOPKA -->
-    <footer class="text-center text-sm text-gray-500 py-6">
-      © 2025 HydraulikBoost. Więcej Klientów. Więcej Zleceń. Mniej kombinowania.
+    <footer class="bg-gray-900 text-white py-12 px-6">
+      <div class="max-w-6xl mx-auto">
+        <div class="grid md:grid-cols-3 gap-8 mb-8">
+          <div>
+            <div class="flex items-center gap-3 mb-4">
+              <div class="bg-yellow-400 p-2 rounded-full">
+                <img src="https://img.icons8.com/ios-filled/20/plumber.png" alt="logo" class="w-4 h-4">
+              </div>
+              <h4 class="text-xl font-bold">HydraulikBoost</h4>
+            </div>
+            <p class="text-gray-400 text-sm">
+              Pomagamy hydraulikom zdobywać więcej klientów z internetu. 
+              Profesjonalnie, skutecznie, bez kombinowania.
+            </p>
+          </div>
+          
+          <div>
+            <h5 class="font-bold mb-4">Kontakt</h5>
+            <div class="space-y-2 text-sm text-gray-400">
+              <div>📧 kontakt@hydraulikboost.pl</div>
+              <div>📱 +48 123 456 789</div>
+              <div>🕒 Pon-Pt: 9:00-18:00</div>
+            </div>
+          </div>
+          
+          <div>
+            <h5 class="font-bold mb-4">Gwarancje</h5>
+            <div class="space-y-2 text-sm text-gray-400">
+              <div>🛡️ 30 dni gwarancji zwrotu</div>
+              <div>⚡ Realizacja w 7 dni</div>
+              <div>📊 Transparentne raportowanie</div>
+              <div>🎯 Gwarancja rezultatu</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="border-t border-gray-700 pt-8 text-center">
+          <p class="text-sm text-gray-400">
+            © 2025 HydraulikBoost. Więcej Klientów. Więcej Zleceń. Mniej kombinowania.
+          </p>
+          <p class="text-xs text-gray-500 mt-2">
+            Wszystkie znaki towarowe należą do ich właścicieli. Rezultaty mogą się różnić.
+          </p>
+        </div>
+      </div>
     </footer>
+
+    <!-- FLOATING CTA (mobile) -->
+    <div class="fixed bottom-4 left-4 right-4 md:hidden z-50">
+      <a href="#kontakt" class="block bg-yellow-400 text-blue-950 text-center font-bold py-3 rounded-full shadow-2xl pulse-glow">
+        🎯 DARMOWY AUDYT
+      </a>
+    </div>
+
+    <!-- SMOOTH SCROLL SCRIPT -->
+    <script>
+      // Smooth scroll for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+          });
+        });
+      });
+
+      // Add animation on scroll
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('slide-in');
+          }
+        });
+      }, observerOptions);
+
+      // Observe all sections
+      document.querySelectorAll('section').forEach(section => {
+        observer.observe(section);
+      });
+
+      // Form submission enhancement
+      const form = document.querySelector('form');
+      if (form) {
+        form.addEventListener('submit', function(e) {
+          const submitBtn = form.querySelector('button[type="submit"]');
+          submitBtn.innerHTML = '⏳ Wysyłanie...';
+          submitBtn.disabled = true;
+          
+          // Re-enable after 3 seconds (in case of error)
+          setTimeout(() => {
+            submitBtn.innerHTML = '🚀 WYŚLIJ ZGŁOSZENIE (darmowy audyt)';
+            submitBtn.disabled = false;
+          }, 3000);
+        });
+      }
+
+      // Add counter animation for statistics
+      function animateCounters() {
+        const counters = document.querySelectorAll('.text-3xl.font-black.text-yellow-400');
+        counters.forEach(counter => {
+          const target = parseInt(counter.textContent.replace(/\D/g, ''));
+          let count = 0;
+          const increment = target / 100;
+          
+          const updateCounter = () => {
+            if (count < target) {
+              count += increment;
+              counter.textContent = Math.ceil(count) + (counter.textContent.includes('+') ? '+' : counter.textContent.includes('%') ? '%' : '');
+              setTimeout(updateCounter, 20);
+            } else {
+              counter.textContent = target + (counter.textContent.includes('+') ? '+' : counter.textContent.includes('%') ? '%' : counter.textContent.includes('dni') ? ' dni' : '');
+            }
+          };
+          
+          updateCounter();
+        });
+      }
+
+      // Trigger counter animation when statistics section is visible
+      const statsSection = document.querySelector('.bg-gradient-to-r.from-blue-600.to-purple-600');
+      if (statsSection) {
+        const statsObserver = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              animateCounters();
+              statsObserver.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.5 });
+        
+        statsObserver.observe(statsSection);
+      }
+    </script>
+
   </body>
-</html>
+</html>-gray-700">Pracujesz tylko ze starymi klientami, brakuje Ci nowych. Konkurencja zabiera Ci robotę.</p>
+          </div>
+          <div class="bg-white p-6 rounded-xl shadow-md border border-red-200">
+            <h4 class="font-bold text-red-600 mb-3">❌ "Nie jestem widoczny w Google"</h4>
+            <p class="text-gray-700">Klient szuka "hydraulik [miasto]" - nie znajduje Cię. Dzwoni do konkurencji.</p>
+          </div>
+          <div class="bg-white p-6 rounded-xl shadow-md border border-red-200">
+            <h4 class="font-bold text-red-600 mb-3">❌ "Za drogie reklamy"</h4>
+            <p class="text-gray-700">Facebook Ads, Google Ads - kosztują krocie, a efektów brak. Pieniądze w błoto.</p>
+          </div>
+          <div class="bg-white p-6 rounded-xl shadow-md border border-red-200">
+            <h4 class="font-bold text-red-600 mb-3">❌ "Nie umiem w internet"</h4>
+            <p class="text-gray-700">Strony, SEO, wizytówki Google - to wszystko brzmi jak chińszczyzna.</p>
+          </div>
+        </div>
+        <div class="mt-12 p-6 bg-yellow-100 rounded-xl border-2 border-yellow-400">
+          <p class="text-xl font-bold text-gray-800">
+            💡 <strong>Rozwiązanie:</strong> Kompletny system pozyskiwania klientów z internetu - bez Twojego zaangażowania!
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CO DOSTAJESZ -->
+    <section class="py-20 bg-white px-6">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-16">
+          <h3 class="text-4xl font-black mb-4">Co dokładnie dostajesz?</h3>
+          <p class="text-xl text-gray-600">Kompletny system, który działa 24/7 i sprowadza Ci klientów</p>
+        </div>
+        
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-2xl shadow-lg hover:shadow-2xl transition transform hover:scale-105">
+            <div class="bg-blue-600 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
+              <span class="text-2xl text-white">🌐</span>
+            </div>
+            <h4 class="text-xl font-bold mb-4 text-center text-blue-900">Profesjonalna Strona</h4>
+            <ul class="space-y-2 text-sm text-gray-700">
+              <li>✅ Responsywna (działa na telefonie)</li>
+              <li>✅ Szybko się ładuje</li>
+              <li>✅ SEO - Google Cię znajdzie</li>
+              <li>✅ Formularz kontaktowy</li>
+              <li>✅ Galeria wykonanych prac</li>
+              <li>✅ Mapa dojazdu</li>
+            </ul>
+          </div>
+
+          <div class="bg-gradient-to-br from-green-50 to-green-100 p-8 rounded-2xl shadow-lg hover:shadow-2xl transition transform hover:scale-105">
+            <div class="bg-green-600 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
+              <span class="text-2xl text-white">📍</span>
+            </div>
+            <h4 class="text-xl font-bold mb-4 text-center text-green-900">Wizytówka Google</h4>
+            <ul class="space-y-2 text-sm text-gray-700">
+              <li>✅ Optymalizacja profilu</li>
+              <li>✅ Profesjonalne zdjęcia</li>
+              <li>✅ Strategia zbierania opinii</li>
+              <li>✅ Aktualizacje i posty</li>
+              <li>✅ Odpowiedzi na recenzje</li>
+              <li>✅ Wyświetlanie w mapach</li>
+            </ul>
+          </div>
+
+          <div class="bg-gradient-to-br from-yellow-50 to-yellow-100 p-8 rounded-2xl shadow-lg hover:shadow-2xl transition transform hover:scale-105">
+            <div class="bg-yellow-600 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
+              <span class="text-2xl text-white">🎯</span>
+            </div>
+            <h4 class="text-xl font-bold mb-4 text-center text-yellow-900">Lokalne SEO</h4>
+            <ul class="space-y-2 text-sm text-gray-700">
+              <li>✅ Optymalizacja na fraz lokalnych</li>
+              <li>✅ "hydraulik [miasto]" - pozycja TOP 3</li>
+              <li>✅ Wpisy w katalogach lokalnych</li>
+              <li>✅ Schema markup</li>
+              <li>✅ Konsultacje strategiczne</li>
+              <li>✅ Raportowanie wyników</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="mt-12 text-center">
+          <div class="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-8 rounded-2xl shadow-xl">
+            <h4 class="text-2xl font-bold mb-4">🎁 BONUS: Dostajecie również</h4>
+            <div class="grid md:grid-cols-3 gap-4 text-sm">
+              <div>📱 Instrukcja obsługi wizytówki Google</div>
+              <div>📊 Miesięczne raporty z wyników</div>
+              <div>🔧 Wsparcie techniczne przez 3 miesiące</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CENNIK Z URGENCY -->
+    <section class="py-20 px-6 bg-gray-900 text-white">
+      <div class="max-w-3xl mx-auto text-center">
+        <div class="bg-red-600 text-white px-4 py-2 rounded-full inline-block mb-6 animate-pulse">
+          ⚡ OFERTA LIMITOWANA - ZOSTAŁO 3 MIEJSCA W TYM MIESIĄCU
+        </div>
+        
+        <h3 class="text-4xl font-bold mb-8">Cena (tylko do końca tygodnia)</h3>
+        
+        <div class="bg-white text-gray-900 p-8 rounded-2xl shadow-2xl mb-6">
+          <div class="flex justify-center items-center gap-4 mb-4">
+            <span class="text-2xl text-red-500 line-through">2490 PLN</span>
+            <span class="text-5xl font-black text-green-600">1490 PLN</span>
+            <div class="bg-red-500 text-white px-2 py-1 rounded text-sm font-bold">-40%</div>
+          </div>
+          <p class="text-gray-600 mb-6">Jednorazowo. Bez ukrytych kosztów. Bez miesięcznych opłat.</p>
+          
+          <div class="border-t pt-6">
+            <p class="text-lg font-bold mb-2">Chcesz stałą opiekę?</p>
+            <p class="text-3xl font-bold text-blue-600">+99 PLN / miesiąc</p>
+            <p class="text-sm text-gray-600">Aktualizacje, nowe treści, odpowiedzi na opinie</p>
+          </div>
+        </div>
+
+        <!-- GWARANCJA -->
+        <div class="bg-green-100 text-green-900 p-6 rounded-xl mb-6">
+          <h4 class="text-xl font-bold mb-2">🛡️ GWARANCJA 30 DNI</h4>
+          <p>Jeśli w ciągu 30 dni nie zauważysz wzrostu zapytań - zwracamy 100% pieniędzy. Bez pytań.</p>
+        </div>
+
+        <a href="#kontakt" class="bg-yellow-400 text-blue-950 text-xl font-black px-12 py-4 rounded-full hover:bg-yellow-300 transition transform hover:scale-105 pulse-glow inline-block">
+          🚀 ZAMAWIAM TERAZ (oszczędzam 1000 PLN)
+        </a>
+        
+        <p class="text-sm mt-4 opacity-75">Płatność po realizacji. Faktura VAT.</p>
+      </div>
+    </section>
+
+    <!-- REFERENCJE ROZBUDOWANE -->
+    <section class="py-20 px-6 bg-blue-50">
+      <div class="max-w-5xl mx-auto">
+        <h3 class="text-4xl font-bold text-center mb-12">Prawdziwe rezultaty naszych klientów</h3>
+        
+        <div class="grid md:grid-cols-2 gap-8 mb-12">
+          <div class="bg-white p-8 rounded-2xl shadow-lg">
+            <div class="flex items-center gap-4 mb-4">
+              <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold">
+                M
+              </div>
+              <div>
+                <h4 class="font-bold">Mariusz Kowalski</h4>
+                <p class="text-sm text-gray-600">Hydraulik, Lublin</p>
+                <div class="text-yellow-400">⭐⭐⭐⭐⭐</div>
+              </div>
+            </div>
+            <p class="italic mb-4">"Wcześniej miałem tylko Facebooka. Teraz mam stronę, wizytówkę i odbieram 3-5 telefonów dziennie. Zlecenia są z Google. <strong>Zarabiam o 40% więcej miesięcznie.</strong>"</p>
+            <div class="bg-green-100 p-3 rounded text-sm">
+              <strong>Rezultat:</strong> +5 zleceń tygodniowo, +2400 PLN miesięcznie
+            </div>
+          </div>
+
+          <div class="bg-white p-8 rounded-2xl shadow-lg">
+            <div class="flex items-center gap-4 mb-4">
+              <div class="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center text-white font-bold">
+                A
+              </div>
+              <div>
+                <h4 class="font-bold">Andrzej Nowak</h4>
+                <p class="text-sm text-gray-600">Usługi wod-kan, Kraków</p>
+                <div class="text-yellow-400">⭐⭐⭐⭐⭐</div>
+              </div>
+            </div>
+            <p class="italic mb-4">"Nie ogarniam komputerów, ale wszystko mi zrobili. Klient widzi opinie, dzwoni, jestem zadowolony. <strong>Wreszcie mam ustabilizowany dochód.</strong>"</p>
+            <div class="bg-green-100 p-3 rounded text-sm">
+              <strong>Rezultat:</strong> +3-4 nowe zlecenia tygodniowo
+            </div>
+          </div>
+
+          <div class="bg-white p-8 rounded-2xl shadow-lg">
+            <div class="flex items-center gap-4 mb-4">
+              <div class="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center text-white font-bold">
+                P
+              </div>
+              <div>
+                <h4 class="font-bold">Piotr Lewandowski</h4>
+                <p class="text-sm text-gray-600">Hydraulik, Warszawa</p>
+                <div class="text-yellow-400">⭐⭐⭐⭐⭐</div>
+              </div>
+            </div>
+            <p class="italic mb-4">"Po 2 tygodniach byłem na pierwszej stronie Google. Teraz klienci dzwonią do mnie, a nie ja szukam roboty. <strong>Mogę wybierać zlecenia!</strong>"</p>
+            <div class="bg-green-100 p-3 rounded text-sm">
+              <strong>Rezultat:</strong> Pozycja #2 w Google, +6 zapytań dziennie
+            </div>
+          </div>
+
+          <div class="bg-white p-8 rounded-2xl shadow-lg">
+            <div class="flex items-center gap-4 mb-4">
+              <div class="w-12 h-12 bg-orange-600 rounded-full flex items-center justify-center text-white font-bold">
+                T
+              </div>
+              <div>
+                <h4 class="font-bold">Tomasz Wiśniewski</h4>
+                <p class="text-sm text-gray-600">Hydraulik, Gdańsk</p>
+                <div class="text-yellow-400">⭐⭐⭐⭐⭐</div>
+              </div>
+            </div>
+            <p class="italic mb-4">"W pierwszy weekend po uruchomieniu strony miałem 4 interwencje. Wszystkie z Google. <strong>ROI zwrócił się w pierwszym miesiącu.</strong>"</p>
+            <div class="bg-green-100 p-3 rounded text-sm">
+              <strong>Rezultat:</strong> 4 zlecenia w weekend, zwrot inwestycji w 30 dni
+            </div>
+          </div>
+        </div>
+
+        <!-- STATYSTYKI -->
+        <div class="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-8 rounded-2xl text-center">
+          <h4 class="text-2xl font-bold mb-6">Nasze rezultaty w liczbach</h4>
+          <div class="grid md:grid-cols-4 gap-6">
+            <div>
+              <div class="text-3xl font-black text-yellow-400">47+</div>
+              <div class="text-sm">Zadowolonych hydraulików</div>
+            </div>
+            <div>
+              <div class="text-3xl font-black text-yellow-400">350+</div>
+              <div class="text-sm">Dodatkowych zleceń miesięcznie</div>
+            </div>
+            <div>
+              <div class="text-3xl font-black text-yellow-400">95%</div>
+              <div class="text-sm">Klientów poleca nas dalej</div>
+            </div>
+            <div>
+              <div class="text-3xl font-black text-yellow-400">30 dni</div>
+              <div class="text-sm">Średni czas zwrotu inwestycji</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-20 px-6 bg-white">
+      <div class="max-w-4xl mx-auto">
+        <h3 class="text-4xl font-bold text-center mb-12">Najczęściej zadawane pytania</h3>
+        <div class="space-y-6">
+          <div class="bg-gray-50 p-6 rounded-xl">
+            <h4 class="font-bold text-lg mb-2">❓ Ile to trwa?</h4>
+            <p class="text-gray-700">Strona i wizytówka Google są gotowe w 7 dni roboczych. Pierwsze efekty SEO widoczne po 2-3 tygodniach.</p>
+          </div>
+          <div class="bg-gray-50 p-6 rounded-xl">
+            <h4 class="font-bold text-lg mb-2">❓ A co jeśli nie będę zadowolony?</h4>
+            <p class="text-gray-700">Masz 30 dni na ocenę. Jeśli nie jesteś zadowolony - zwracamy 100% pieniędzy bez pytań.</p>
+          </div>
+          <div class="bg-gray-50 p-6 rounded-xl">
+            <h4 class="font-bold text-lg mb-2">❓ Czy muszę się znać na komputerach?</h4>
+            <p class="text-gray-700">Nie! Robimy wszystko za Ciebie. Jedyne co musisz - to odbierać telefony od nowych klientów.</p>
+          </div>
+          <div class="bg-gray-50 p-6 rounded-xl">
+            <h4 class="font-bold text-lg mb-2">❓ Czy to działa w małych miastach?</h4>
+            <p class="text-gray-700">Tak! W małych miastach często jest mniej konkurencji, więc efekty są jeszcze lepsze.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LAST CHANCE CTA -->
+    <section class="py-20 px-6 bg-gradient-to-r from-red-600 to-pink-600 text-white text-center">
+      <div class="max-w-3xl mx-auto">
+        <h3 class="text-4xl font-bold mb-6">⏰ Ostatnia szansa w tym miesiącu!</h3>
+        <p class="text-xl mb-8">
+          Zostały tylko <strong>3 miejsca</strong> do końca listopada.<br />
+          Następny nabór dopiero w grudniu (w wyższej cenie).
+        </p>
+        <a href="#kontakt" class="bg-yellow-400 text-blue-950 text-2xl font-black px-12 py-4 rounded-full hover:bg-yellow-300 transition transform hover:scale-105 pulse-glow inline-block">
+          🔥 REZERWUJĘ MIEJSCE TERAZ
+        </a>
+        <p class="text-sm mt-4">*Promocja ważna tylko do 30.11.2025</p>
+      </div>
+    </section>
+
+    <!-- FORMULARZ ROZBUDOWANY -->
+    <section id="kontakt" class="py-20 px-6 bg-blue-50">
+      <div class="max-w-2xl mx-auto bg-white p-8 rounded-2xl shadow-2xl">
+        <div class="text-center mb-8">
+          <h3 class="text-3xl font-bold mb-4">🎯 Zamów darmowy audyt</h3>
+          <p class="text-gray-600">Sprawdzimy Twoją obecną widoczność w Google i pokażemy jak ją poprawić</p>
+          <div class="bg-green-100 text-green-800 p-3 rounded-lg mt-4">
+            <strong>💰 Wartość audytu: 297 PLN - dziś za darmo!</strong>
+          </div>
+        </div>
+        
+        <form action="https://formspree.io/f/myzjwyqo" method="POST" class="space-y-6">
+          <input type="hidden" name="_subject" value="🔥 Nowe zgłoszenie - HydraulikBoost">
+          
+          <div>
+            <label class="block text-sm font-semibold mb-2">Imię i nazwisko *</label>
+            <input type="text" name="Imię" placeholder="np. Jan Kowalski" required class="w-full p-4 border-2 border-gray-200 rounded-lg focus:border-blue-500 transition"/>
+          </div>
+          
+          <div>
+            <label class="block text-sm font-semibold mb-2">Miasto działania *</label>
+            <input type="text" name="Miasto" placeholder="np. Warszawa" required class="w-full p-4 border-2 border-gray-200 rounded-lg focus:border-blue-500 transition"/>
+          </div>
+          
+          <div>
+            <label class="block text-sm font-semibold mb-2">Numer telefonu *</label>
+            <input type="tel" name="Telefon" placeholder="np. 123 456 789" required class="w-full p-4 border-2 border-gray-200 rounded-lg focus:border-blue-500 transition"/>
+          </div>
+          
+          <div>
+            <label class="block text-sm font-semibold mb-2">Jak wygląda Twoja sytuacja?</label>
+            <textarea name="Opis" rows="4" placeholder="np. Mam mało zleceń, nie jestem widoczny w Google, chciałbym zwiększyć liczbę klientów..." class="w-full p-4 border-2 border-gray-200 rounded-lg focus:border-blue-500 transition"></textarea>
+          </div>
+          
+          <div class="bg-yellow-50 p-4 rounded-lg">
+            <h4 class="font-bold mb-2">Co otrzymasz w audycie:</h4>
+            <div class="text-sm space-y-1">
+              <div>✅ Analiza Twojej obecnej widoczności w Google</div>
+              <div>✅ Sprawdzenie konkurencji w Twoim mieście</div>
+              <div>✅ Plan działań do wdrożenia</div>
+              <div>✅ Wycenę indywidualną (możliwa zniżka!)</div>
+            </div>
+          </div>
+          
+          <button type="submit" class="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white text-xl font-bold px-8 py-4 rounded-lg hover:from-blue-700 hover:to-purple-700 transition transform hover:scale-105 pulse-glow">
+            🚀 WYŚLIJ ZGŁOSZENIE (darmowy audyt)
+          </button>
+          
+          <p class="text
